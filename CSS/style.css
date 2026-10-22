@@ -1,59 +1,80 @@
+:root {
+    --rouge: #dd0200;
+    --orange-vif: #f54603;
+    --orange: #ff7a00;
+    --texte: #1f1f1f;
+    --gris: #6b6b6b;
+    --bordure: #e6e6e6;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #1f2937;
-    background: #f3f6fa;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--texte);
+    background: #ffffff;
 }
 
+/* ---------- En-tête et menu ---------- */
 .site-header {
-    padding: 24px 5%;
-    color: white;
-    background: #1769aa;
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 32px 0 0;
 }
 
-h1 {
-    margin: 0 0 18px;
-    font-size: 2rem;
+.site-header h1 {
+    margin: 0 0 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--texte);
 }
 
 nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, var(--orange-vif), #ffffff) 1;
 }
 
 nav a {
-    padding: 9px 12px;
-    color: white;
+    padding: 7px 14px;
+    color: var(--gris);
+    font-size: 0.95rem;
     text-decoration: none;
-    background: #0d4f80;
-    border-radius: 5px;
+    border: 1px solid var(--bordure);
+    border-radius: 999px;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
 
-nav a:hover,
+nav a:hover {
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
 nav a.active {
-    background: #f59e0b;
-    color: #17202a;
+    color: #ffffff;
+    background: var(--rouge);
+    border-color: var(--rouge);
 }
 
+/* ---------- Contenu ---------- */
 .container {
     width: min(1100px, 90%);
-    margin: 35px auto;
-    padding: 28px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    margin: 28px auto 60px;
 }
 
 .description {
-    margin-top: 0;
-    font-size: 1.1rem;
+    margin: 0 0 24px;
+    font-size: 1.05rem;
+    color: var(--gris);
 }
 
+/* ---------- Tableau ---------- */
 .table-wrapper {
     overflow-x: auto;
 }
@@ -61,34 +82,37 @@ nav a.active {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 22px;
+    border: 1px solid var(--bordure);
 }
 
 th,
 td {
-    padding: 12px;
-    border: 1px solid #b9c4cf;
+    padding: 12px 16px;
+    border: 1px solid var(--bordure);
     text-align: left;
 }
 
 th {
-    color: white;
-    background: #1769aa;
+    color: #ffffff;
+    font-weight: 600;
+    background: var(--orange-vif);
 }
 
-tbody tr:nth-child(even) {
-    background: #eef5fb;
+tbody tr:hover {
+    background: #fff4ec;
 }
 
+/* ---------- Messages ---------- */
 .error {
     padding: 14px;
-    color: #8a1c1c;
-    background: #fde2e2;
-    border: 1px solid #e9a5a5;
+    color: var(--rouge);
+    border-left: 4px solid var(--rouge);
+    background: #fff1f0;
 }
 
 .empty {
     padding: 14px;
-    background: #fff4d6;
-    border: 1px solid #e7c66b;
+    color: var(--gris);
+    border-left: 4px solid var(--orange);
+    background: #fff8f0;
 }
