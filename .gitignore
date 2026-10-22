@@ -1,0 +1,6 @@
+# Configuration locale contenant les identifiants
+config.php
+
+.DS_Store
+Thumbs.db
+.vscode/
