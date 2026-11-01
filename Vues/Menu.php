@@ -9,6 +9,7 @@ $surRequetes = str_starts_with($page, 'requete');
             <span class="brand-dot"></span>Covoiturage
         </a>
         <nav class="menu-principal" aria-label="Navigation principale">
+            <a href="index.php?page=covoiturages" class="<?= $page === 'covoiturages' ? 'active' : '' ?>">Covoiturages à venir</a>
             <a href="index.php?page=accueil" class="<?= $page === 'accueil' ? 'active' : '' ?>">Accueil</a>
             <a href="index.php?page=accueil#requetes" class="<?= $surRequetes ? 'active' : '' ?>">Requêtes</a>
         </nav>

@@ -7,6 +7,22 @@
     --bordure: #e6e6e6;
 }
 
+/* Liste des covoiturages à venir */
+.trajets-page { padding-top: 30px; }
+.grille-trajets { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 24px; }
+.carte-trajet { padding: 24px; border: 1px solid var(--bordure); border-radius: 16px; background: #fff; }
+.trajet-entete { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; color: var(--orange-vif); font-weight: 600; }
+.trajet-places { padding: 6px 12px; border-radius: 999px; background: #fff1e8; font-size: 0.9rem; }
+.carte-trajet h2 { margin: 22px 0; font-size: 1.3rem; }
+.trajet-details { margin: 0; overflow-wrap: anywhere; }
+.trajet-details dt { margin-top: 16px; color: var(--gris); font-size: 0.9rem; }
+.trajet-details dd { margin: 5px 0 0; line-height: 1.5; }
+.trajet-retour { margin-top: 32px; }
+@media (max-width: 640px) {
+    .topbar-inner { flex-direction: column; gap: 16px; }
+    .menu-principal { justify-content: center; }
+}
+
 * {
     box-sizing: border-box;
 }
