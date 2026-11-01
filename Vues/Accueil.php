@@ -21,6 +21,7 @@
             </p>
             <div class="hero-actions">
                 <a class="btn btn-primaire" href="index.php?page=covoiturages">Covoiturages à venir</a>
+                <a class="btn btn-primaire" href="index.php?page=salaries">Liste des salaries</a>
                 <a class="btn btn-primaire" href="#">Connexion</a>
                 <a class="btn btn-primaire btn-orange" href="#">Créer un compte</a>
                 <a class="btn btn-secondaire" href="#requetes">Voir les requêtes</a>
