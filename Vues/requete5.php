@@ -19,7 +19,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Requête n°5</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="/application-covoiturage-entreprise/CSS/style.css">
 </head>
 
 <body>

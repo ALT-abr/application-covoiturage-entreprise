@@ -21,4 +21,4 @@ class AccueilController
 
         require __DIR__ . '/../Vues/Accueil.php';
     }
-}
+}  
