@@ -1,3 +1,4 @@
+<!-- Le Modèle regroupe tout ce qui concerne l’accès aux données, pas seulement les requêtes. connexion.php ouvre la connexion à la base (PDO, identifiants, gestion de l’erreur de connexion) -->
 <?php
 $config = require __DIR__ . '/config.php';
 

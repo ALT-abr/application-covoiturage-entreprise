@@ -1,10 +1,10 @@
 <?php
 require_once 'connexion.php';
 
-// Requête n°9 : Afficher les salariés qui ont un véhicule : nom, prénom, marque et modèle.
-$sql = 'SELECT e.nom_employe, e.prenom_employe, v.marque, v.modele
+$sql = 'SELECT e.nom_employe, e.prenom_employe
         FROM employe e
-        JOIN vehicule v ON e.id_employe = v.id_employe';
+        LEFT JOIN vehicule v ON e.id_employe = v.id_employe
+        WHERE v.id_vehicule IS NULL';
 
 try {
     $resultats = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
@@ -18,28 +18,15 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Requête n°9 - Covoiturage</title>
+    <title>Requête n°6 - Covoiturage</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1>Requête n°9</h1>
-        <nav aria-label="Menu des requêtes">
-            <a href="requete1.php">Requête 1</a>
-            <a href="requete2.php">Requête 2</a>
-            <a href="requete3.php">Requête 3</a>
-            <a href="requete4.php">Requête 4</a>
-            <a href="requete5.php">Requête 5</a>
-            <a href="requete6.php">Requête 6</a>
-            <a href="requete7.php">Requête 7</a>
-            <a href="requete8.php">Requête 8</a>
-            <a class="active" href="requete9.php">Requête 9</a>
-            <a href="requete10.php">Requête 10</a>
-        </nav>
-    </header>
+    <?php include __DIR__ . '/menu.php'; ?>
 
     <main class="container">
-        <p class="description">Afficher les salariés qui ont un véhicule : nom, prénom, marque et modèle.</p>
+        <h1>Requête n°6</h1>
+        <p class="description">Afficher les salariés qui n'ont pas de véhicule.</p>
 
         <?php if (isset($erreur)): ?>
             <p class="error">La requête n'a pas pu être exécutée : <?= htmlspecialchars($erreur) ?></p>
@@ -52,8 +39,6 @@ try {
                         <tr>
                             <th>Nom</th>
                             <th>Prénom</th>
-                            <th>Marque</th>
-                            <th>Modèle</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,8 +46,6 @@ try {
                             <tr>
                                 <td><?= htmlspecialchars((string) $ligne['nom_employe']) ?></td>
                                 <td><?= htmlspecialchars((string) $ligne['prenom_employe']) ?></td>
-                                <td><?= htmlspecialchars((string) $ligne['marque']) ?></td>
-                                <td><?= htmlspecialchars((string) $ligne['modele']) ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

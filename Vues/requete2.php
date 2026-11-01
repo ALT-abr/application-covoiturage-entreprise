@@ -23,26 +23,12 @@ try {
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1>Requête n°2</h1>
-        <nav aria-label="Menu des requêtes">
-            <a href="requete1.php">Requête 1</a>
-            <a class="active" href="requete2.php">Requête 2</a>
-            <a href="requete3.php">Requête 3</a>
-            <a href="requete4.php">Requête 4</a>
-            <a href="requete5.php">Requête 5</a>
-            <a href="requete6.php">Requête 6</a>
-            <a href="requete7.php">Requête 7</a>
-            <a href="requete8.php">Requête 8</a>
-            <a href="requete9.php">Requête 9</a>
-            <a href="requete10.php">Requête 10</a>
-        </nav>
-    </header>
+    <?php include __DIR__ . '/menu.php'; ?>
+
 
     <main class="container">
-        <p class="description">
-            Afficher les 3 premiers salariés dans l'ordre alphabétique des noms.
-        </p>
+        <h1>Requête n°2</h1>
+        <p class="description">Afficher les 3 premiers salariés dans l'ordre alphabétique des noms.</p>
 
         <?php if (isset($erreur)): ?>
             <p class="error">La requête n'a pas pu être exécutée : <?= htmlspecialchars($erreur) ?></p>
