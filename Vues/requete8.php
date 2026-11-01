@@ -1,5 +1,6 @@
 <?php
-require_once 'connexion.php';
+require_once __DIR__ . '/../Models/connexion.php';
+
 
 // Requête n°8 : Combien y a-t-il de salariés par service ?
 $sql = 'SELECT s.nom_service, s.heure_debut,
@@ -24,7 +25,7 @@ try {
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <?php include __DIR__ . '/menu.php'; ?>
+    <?php include __DIR__ . '/Menu.php'; ?>
 
     <main class="container">
         <h1>Requête n°8</h1>

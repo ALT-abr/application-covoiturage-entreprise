@@ -1,5 +1,6 @@
 <?php
-require_once 'connexion.php';
+require_once __DIR__ . '/../Models/connexion.php';
+
 
 // Requête 2 : les 3 premiers salariés dans l'ordre alphabétique des noms.
 $sql = 'SELECT nom_employe, prenom_employe
@@ -23,7 +24,7 @@ try {
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <?php include __DIR__ . '/menu.php'; ?>
+    <?php include __DIR__ . '/Menu.php'; ?>
 
 
     <main class="container">

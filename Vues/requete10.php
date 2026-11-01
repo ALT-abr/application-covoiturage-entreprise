@@ -1,5 +1,6 @@
 <?php
-require_once 'connexion.php';
+require_once __DIR__ . '/../Models/connexion.php';
+
 
 // Requête n°10 : Combien de demandes de participation a reçu chaque covoiturage ?
 $sql = 'SELECT c.id_covoiturage,
@@ -25,7 +26,7 @@ try {
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <?php include __DIR__ . '/menu.php'; ?>
+    <?php include __DIR__ . '/Menu.php'; ?>
 
     <main class="container">
         <h1>Requête n°10</h1>

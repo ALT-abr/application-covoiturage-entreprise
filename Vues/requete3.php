@@ -1,5 +1,6 @@
 <?php
-require_once 'connexion.php';
+require_once __DIR__ . '/../Models/connexion.php';
+
 $sql = 'SELECT e.nom_employe, e.prenom_employe, s.nom_service 
         FROM employe e 
         JOIN service s 
@@ -24,7 +25,7 @@ try {
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-        <?php include __DIR__ . '/menu.php'; ?>
+        <?php include __DIR__ . '/Menu.php'; ?>
 
     <main class="container">
         <h1>Requête n°3</h1>

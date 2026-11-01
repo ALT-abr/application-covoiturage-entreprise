@@ -1,6 +1,9 @@
 <?php
-require_once 'connexion.php';
-$sql = "SELECT nom_employe, prenom_employe FROM employe WHERE nom_employe LIKE 'M%'";
+require_once __DIR__ . '/../Models/connexion.php';
+
+$sql = "SELECT nom_employe, prenom_employe 
+        FROM employe 
+        WHERE nom_employe LIKE 'M%'";
 try {
     $resultats = $pdo->query($sql)->fetchAll();
 } catch (PDOException $e) {
@@ -20,7 +23,7 @@ try {
 </head>
 
 <body>
-    <?php include __DIR__ . '/menu.php'; ?>
+    <?php include __DIR__ . '/Menu.php'; ?>
 
     <main class="container">
         <h1>Requête n°5</h1>

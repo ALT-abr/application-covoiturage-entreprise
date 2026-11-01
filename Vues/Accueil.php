@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <?php include __DIR__ . '/menu.php'; ?>
+    <?php include __DIR__ . '/Menu.php'; ?>
 
     <main>
         <section class="hero">

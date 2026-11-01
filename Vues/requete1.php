@@ -1,5 +1,6 @@
 <?php
-require_once 'connexion.php';
+require_once __DIR__ . '/../Models/connexion.php';
+
 $sql = 'SELECT nom_employe, prenom_employe, email FROM employe
         ORDER BY nom_employe ASC, prenom_employe ASC';
 try {
@@ -20,11 +21,10 @@ try {
 </head>
 
 <body>
-        <header class="site-header">
-                <h1>Requête n°1</h1>
-                <nav><?php for ($i = 1; $i <= 10; $i++): ?><a class="<?= $i === 1 ? 'active' : '' ?>" href="requete<?= $i ?>.php">Requête <?= $i ?></a><?php endfor; ?></nav>
-        </header>
+        <?php include __DIR__ . '/Menu.php'; ?>
+
         <main class="container">
+                <h1>Requête n°1</h1>
                 <p class="description">Afficher le nom, prénom et email de tous les salariés triés par nom et prénom.</p>
                 <?php if (isset($erreur)): ?><p class="error">Erreur : <?= htmlspecialchars($erreur) ?></p><?php elseif (!$resultats): ?><p class="empty">Aucun salarié trouvé.</p><?php else: ?><div class="table-wrapper">
                                 <table>

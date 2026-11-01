@@ -16,5 +16,5 @@ if ($page === 'accueil') {
     (new AccueilController())->afficher();
 } else {
     // Transitoire : les pages de requêtes seront confiées à un contrôleur lorsqu'elles auront été migrées vers le modèle.
-    require __DIR__ . '/Vue/' . $page . '.php';
+    require __DIR__ . '/Vues/' . $page . '.php';
 }

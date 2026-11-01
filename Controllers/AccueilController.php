@@ -19,6 +19,6 @@ class AccueilController
             10 => 'Demandes de participation a reçu chaque covoiturage',
         ];
 
-        require __DIR__ . '/application-covoiturage-entreprise/Vue/accueil.php';
+        require __DIR__ . '/../Vues/Accueil.php';
     }
 }

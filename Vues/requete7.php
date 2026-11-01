@@ -1,5 +1,6 @@
 <?php
-require_once 'connexion.php';
+require_once __DIR__ . '/../Models/connexion.php';
+
 
 // Requête n°7 : Combien y a-t-il de salariés dans l'entreprise ?
 $sql = 'SELECT COUNT(*) AS nombre_salaries
@@ -21,7 +22,7 @@ try {
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <?php include __DIR__ . '/menu.php'; ?>
+    <?php include __DIR__ . '/Menu.php'; ?>
 
     <main class="container">
         <h1>Requête n°7</h1>
