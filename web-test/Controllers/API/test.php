@@ -1,5 +1,6 @@
 <?php
 // Fichier test pour voir si l'API fonctionne
+//interface de communication entre le backend et notre nouvelle application mobile Flutter  
 
 header('Content-Type: application/json; charset=utf-8');
 

@@ -2,7 +2,7 @@
 
 class Employe
 {
-    public function __construct(private PDO $pdo)
+    public function __construct(private PDO $pdo) // injection de la connexion dans le modèle
     {
     }
 

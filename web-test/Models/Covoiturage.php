@@ -2,7 +2,7 @@
 
 class Covoiturage
 {
-    public function __construct(private PDO $pdo)
+    public function __construct(private PDO $pdo) // injecter la connexion dans le modèle
     {
     }
 
