@@ -16,8 +16,8 @@ class Covoiturage
                     e.nom_employe, e.prenom_employe
              FROM covoiturage c
              INNER JOIN employe e ON e.id_employe = c.id_conducteur
-             WHERE TIMESTAMP(c.date_trajet, c.heure_depart) > :maintenant
-               AND c.statut_covoiturage = 'OUVERT'
+             WHERE TIMESTAMP(c.date_trajet, c.heure_depart) > :maintenant  --  // Ne récupérer que les covoiturages dont la date et l'heure de départ sont postérieures à la date et à l'heure actuelles
+               AND c.statut_covoiturage = 'OUVERT'         --    statut ouvert seulement
              ORDER BY c.date_trajet, c.heure_depart, c.id_covoiturage"
         );
         $requete->execute(['maintenant' => $maintenant->format('Y-m-d H:i:s')]);
